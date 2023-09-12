@@ -1,0 +1,160 @@
+/* general config */
+* {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+:root {
+  --white-color-half-opicity: rgba(255, 255, 255, 0.5);
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --header-footer-width: 1150px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--white-color);
+  background-image: url(./images/concert-image.jpeg);
+  background-color: rgba(0, 0, 0, 0.75);
+  background-blend-mode: darken;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* header  */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+  width: var(--header-footer-width);
+  margin: 0 auto;
+  animation: fade-in 0.5s;
+
+  .logo {
+    font-size: 18px;
+    font-weight: 700;
+    .link {
+      text-decoration: none;
+      list-style: none;
+      color: inherit;
+    }
+  }
+
+  .links {
+    list-style: none;
+    display: flex;
+
+    .link-item {
+      text-decoration: none;
+      margin-inline-start: 15px;
+    }
+
+    .link {
+      text-decoration: none;
+      color: var(--white-color-half-opicity);
+      font-size: 12px;
+      transition: all 0.5s;
+      &:hover {
+        color: var(--white-color);
+      }
+    }
+  }
+}
+
+/* main */
+
+.main {
+  text-align: center;
+  margin-block: 100px;
+  animation: fade-in 0.5s 0.2s backwards;
+
+  .heading {
+    font-size: 64px;
+    font-weight: 900;
+    max-width: 500px;
+    margin: 0 auto 20px auto;
+    line-height: 0.9;
+  }
+  .text {
+    font-size: 24px;
+    max-width: 620px;
+    margin: 0 auto 20px auto;
+    opacity: 0.7;
+    line-height: 1.4;
+    .text--bold {
+      font-weight: 700;
+    }
+  }
+  .form {
+    .input {
+      width: 480px;
+      height: 64px;
+      padding: 0;
+      padding-left: 20px;
+      opacity: 0.75;
+      border-radius: 3px;
+      font-size: 17px;
+      font: inherit;
+      outline: none;
+      transition: all 0.4s;
+
+      &:focus {
+        opacity: 1;
+      }
+      &::placeholder {
+        color: var(--black-color);
+      }
+    }
+    .btn {
+      color: inherit;
+      font-size: 14px;
+      font-weight: 500;
+      font: inherit;
+      letter-spacing: 1;
+      text-transform: uppercase;
+      padding: 20px;
+      width: 133px;
+      height: 64px;
+      background-color: var(--black-color);
+      border: none;
+      border-radius: 3px;
+      transition: all 0.4s;
+      &:hover {
+        background-color: #161616c4;
+      }
+    }
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: var(--header-footer-width);
+  margin-inline: auto;
+  margin-top: auto;
+  padding-top: 15px;
+  font-size: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--white-color-half-opicity);
+  animation: fade-in 0.5s 0.2s backwards;
+
+  .copy-right {
+  }
+  .status {
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
